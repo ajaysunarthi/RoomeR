@@ -1,6 +1,7 @@
-## *RoomeR* ![Logo](images/GeoLocation.png?raw=true )
+## *RoomeR* 
 > RoomeR is a fictious workplace, where you design rooms.
 > In each room you can create your own to-do lists.
+
 - *External libraries used : Angular 1.x for building application and Angular UI Router for routing of app.*
 - *Best viewed in Chrome. Although it works in Firefox but you will not be able to see awesome check box transitions in roomCtrl. Because of no pseudo elements on input elements in firefox.*
 
