@@ -1,0 +1,38 @@
+<!-- Takes care of '/room/..' route 
+    And contains list of tasks
+-->
+
+<div class="container">
+
+    <div class="todo-room-name">
+        <!-- A weird name for the directive. Unlike the 'inplace edit' it doesnot have delete facility'  -->
+        <h3 edit-without-dlt ng-model="ctrl.roomData.name" type="inputText" save-data="ctrl.saveData()">{{ctrl.roomData.name}}</h3>
+        <span class="add-task" ng-click="ctrl.openTaskModal()"></span>
+
+    </div>
+
+    <div class="todo" ng-if="ctrl.roomData.todo.length > 0">
+
+        <div ng-repeat=" todo in ctrl.roomData.todo" class="todo-item">
+            
+            <input type="checkbox" ng-model="todo.status" ng-change="ctrl.checkBoxChange()" class="checkbox">
+            
+            <!-- inplace edit directive -->
+            <label in-place-edit ng-model="todo.task" type="inputText" save-data="ctrl.saveData()" delete-task="ctrl.deleteTask(arg)">{{todo.task}}</label>
+
+        </div>
+
+    </div>
+
+    <!-- Empty rooms not look good so added a div with background image -->
+    <div ng-if="ctrl.roomData.todo.length === 0" class="empty-room-container">
+        
+        <p>This room is empty why not create some to-do list</p>
+        <div class="empty-room"></div>
+        
+    </div>
+
+</div>
+
+<!-- Task Modal is almost similar to room model -->
+<task-modal ng-show="ctrl.taskModal"></task-modal>

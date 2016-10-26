@@ -1,0 +1,25 @@
+<div class="templateRoot">
+    
+    <div class="hover-edit-trigger" >
+
+        <div class="hover-text-field-without-dlt" ng-show="!editState" >
+        <span ng-click="toggle()" ng-class="room-head">{{model}}</span> 
+            <span class="edit-pencil" ng-click="toggle()" title="edit task"></span>
+        </div>
+
+        
+        <input class="inputText" type="text" ng-model="localModel" ng-enter="save()" ng-show="editState && type == 'inputText'" />
+
+    </div>
+    
+    <div class="edit-button-group" ng-show="editState">
+
+        <div class="icon-ok" ng-click="save()"></div>
+        <div class="icon-remove" ng-click="cancel()"></div>
+        
+    </div>
+
+</div>
+
+
+

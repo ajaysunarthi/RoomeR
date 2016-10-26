@@ -1,0 +1,29 @@
+<div class="templateRoot">
+    <!-- HTML file of in-place-edit directive -->    
+    <div class="hover-edit-trigger" >
+
+        <div class="hover-text-field" ng-show="!editState" >
+
+        <span ng-click="toggle()">{{model}}</span> 
+
+            <span class="edit-pencil" ng-click="toggle()" title="edit task"></span>
+            <span class="delete-task"  ng-click="delete({arg:model})" title="delete task"></span>
+        
+        </div>
+        
+        <input class="inputText" type="text" ng-model="localModel" ng-enter="save()" ng-show="editState && type == 'inputText'" />
+
+    </div>
+
+    <!-- These icons will be shown after user interaction  -->
+    <div class="edit-button-group" ng-show="editState">
+
+        <div class="icon-ok" ng-click="save()"></div>
+        <div class="icon-remove" ng-click="cancel()"></div>
+        
+    </div>
+
+</div>
+
+
+

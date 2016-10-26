@@ -1,0 +1,73 @@
+ /* finding media queries at the end of the file 
+    becomes hard because of the size of stylesheets
+    so I have created this file*/
+
+@media (max-width: 670px) {
+	#view{
+    	width: 100%;
+	}
+	.container{
+		width: 90%;
+	}
+	.main{
+		width: 95%;
+    	margin: 0 auto;
+	}
+
+	.container .main h2{
+		font-size: 1.3rem;
+	}
+	
+	.container .main p{
+		font-size: 1.1rem;
+	}
+	.main .image{
+		height: 20rem;
+	} 
+ }
+
+
+ @media (max-width: 375px) {
+ 	.modal-content input {
+    width: 12rem;
+}
+.modal-content button{
+	width: 4rem;
+ }
+
+.hover-text-field{
+	font-size: .95rem;
+}
+
+.hover-text-field-without-dlt {
+	font-size: 1.25;
+}
+
+.modal-content textarea {
+	width: 60%;
+}
+
+}
+
+
+@media (max-width: 630px) {
+	.box{
+		height: 240px;
+		width: 80%; 
+	}
+	.box-content .empty {
+		background: none;
+	}
+	.box-content ul {
+		padding-left: 20px;
+	}
+}
+
+@media (max-width: 420px) {
+	.box{
+		height: 210px;
+		width: 90%; 
+	}
+
+}
+

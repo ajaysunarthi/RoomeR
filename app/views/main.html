@@ -1,0 +1,57 @@
+<!-- This will take care of '/main' route -->
+<!-- Basically gives a peek view of all rooms -->
+
+<div class="container">
+
+    <div class="main-head">
+        <a ui-sref="intro">Roomer</a>
+        <button  ng-click="ctrl.openRoomModal()">Add room</button>
+    </div>
+
+</div>
+
+<div class="main-body">
+
+    <div class="container">
+
+        <div class="box-container">
+                                        <!-- some logic fault need to remove it later -->
+            <div class="box" ng-repeat="room in ctrl.data track by $index">
+                
+                <div class="box-content">
+
+                	<p>{{room.name}}</p>
+
+                    <ul>
+                        
+                        <li ng-repeat="todo in room.todo">{{todo.task}}
+						  <span ng-class="{'checkmark':todo.status,'red':!todo.status}"></span>
+                        </li>
+
+                    </ul>
+
+                    <div ng-if="room.todo.length === 0" class="empty">
+                    	<span>Room is empty</span>
+                    </div>
+
+                </div>
+
+                <div class="preview">
+
+                    <div class="delete" ng-click="ctrl.deleteRoom(room.name)"></div>
+                    <button class="preview-button slice"ui-sref="room({roomid:room.name})">{{room.name}}</button>
+                
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- hidden room model will come up when user wants to create new room. -->
+
+<room-modal ng-show="ctrl.roomModal"></room-modal>

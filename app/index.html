@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    
+    <meta charset="UTF-8">
+
+    <!-- 
+Hello stranger..!! I write clean code. Hope you will enjoy :)
+
+    ______                          ______ 
+| ___ \                         | ___ \
+| |_/ /___   ___  _ __ ___   ___| |_/ /
+|    // _ \ / _ \| '_ ` _ \ / _ \    / 
+| |\ \ (_) | (_) | | | | | |  __/ |\ \ 
+\_| \_\___/ \___/|_| |_| |_|\___\_| \_|
+                                       
+                                        | Ajay Sunarthi | -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	    
+    <!-- load angular libraries -->
+    <script src="lib/angular.min.js"></script>
+    <script src="lib/angular-ui-router.min.js"></script>
+    <script src="lib/angular-animate.min.js"></script>
+
+	
+	<!-- custom font -->
+	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <!-- css styles -->
+    <link rel="stylesheet" href="styles/intro.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/room.css">
+    <link rel="stylesheet" href="styles/media.css">
+
+    <title>RoomeR</title>
+
+</head>
+
+<body ng-app="roomerApp" ng-controller="mainCtrl as ctrl">
+
+	<div id="view" ui-view></div>
+	
+	<!-- scripts -->
+	<script src="app.js"></script>
+	<script src="controllers/maincontroller.js"></script>
+	<script src="controllers/roomcontroller.js"></script>
+	<script src="directives/roomModal.js"></script>
+	<script src="directives/taskModal.js"></script>
+	<script src="directives/inPlaceEdit.js"></script>
+	<script src="directives/editWithoutDlt.js"></script>
+	<script src="directives/ngEnter.js"></script>
+	<script src="factories/dataFactory.js"></script>
+
+</body>
+</html>

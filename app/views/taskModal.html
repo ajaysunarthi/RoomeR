@@ -1,0 +1,23 @@
+<div class="modal">
+
+    <div class="modal-wrapper">
+    
+        <div class="task-modal-back" ng-style="{'background-image': 'url(' + ctrl.back + ')'}"></div>
+
+        <div class="modal-content">
+            
+            <h3 class="tag">{{ctrl.tag}}</h3>
+            
+            <div class="area-container">
+                
+                <textarea ng-model="ctrl.taskName" placeholder="I would love to do ..."></textarea>
+                
+                <button class="go" ng-click="ctrl.addTask(ctrl.taskName)">Go</button>
+
+            </div>
+
+        </div>
+    
+    </div>
+
+</div>
