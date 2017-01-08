@@ -1,4 +1,7 @@
 ## *RoomeR* 
+
+![](screenshots/room.png?raw=true)
+
 > RoomeR is a fictious workplace, where you design rooms.
 > In each room you can create your own to-do lists.
 
